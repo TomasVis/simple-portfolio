@@ -4,7 +4,8 @@ import FlipCard from './FlipCard';
 import Card from "./Card"
 
 
-import '../App.css';
+//import '../App.css';
+
 
 function Projects(props) {
 	console.log(props)
@@ -17,6 +18,7 @@ function Projects(props) {
 	      	onMouseOver={props.onMouseOver}          
 	        onMouseLeave={props.onMouseLeave}
 	        id={0} >
+
 			<Card  id={0} {...props}/>
 		</div>
 	  	<div  

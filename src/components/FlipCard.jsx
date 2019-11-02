@@ -12,8 +12,8 @@ function FlipCard() {
   })
   return (
     <div className='flippedCardWrapper' onMouseOver={() => set(state => !state)} onMouseLeave={() => set(state => !state)}>
-      <animated.div class="c back" style={{ opacity: opacity.interpolate(o => 1 - o), transform }} />
-      <animated.div class="c front" style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }} />
+      <animated.div class="c back" style={{ opacity: opacity.interpolate(o => 1 - o), transform }} ><div style={{color:"white"}}>aaaa</div></animated.div>
+      <animated.div class="c front" style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }} ><div style={{color:"yellow"}}>aaaa</div></animated.div>
     </div>
   )
 }

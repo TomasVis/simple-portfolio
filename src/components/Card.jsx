@@ -3,9 +3,16 @@ import ReactDOM from 'react-dom'
 import { useSpring, animated } from 'react-spring'
 import shortenerImg from '../assets/urlShortener.png';
 import calculator from '../assets/Calculator.png';
-//import cardFace from '../assets/Untitled-2.png';
-/*import '../cssFiles/Card.css'*/
-  //background-image: url(./assets/card-with-slots-and-github.png);
+
+
+import { FaGithub } from 'react-icons/fa';
+import { MdWebAsset } from 'react-icons/md';
+
+
+
+
+const stylesFaGithub = {color:"white",position:"absolute",top:"20px", left:"80px",height:"1.5em",width:"1.5em"}
+const stylesMdWeb = {color:"white",position:"absolute",top:"60px", left:"80px",height:"1.5em",width:"1.5em"}
 
 let images = [shortenerImg,calculator,calculator];
 //let images = [cardFace,cardFace,cardFace];
@@ -36,18 +43,11 @@ function Card(props) {
     >
 
 
-{/*   <button id="cardChild"  className = "button">aaaa</button>*/}
-   <a href="#"><animated.div  style={{
-    backgroundImage: "url(" + images[props.id] + ")", 
-    transform: vale.scale.interpolate((s) =>{ return ` scale(${s})`}),
-    borderRadius: vale.radius.interpolate((s) =>{return `${s}%`})
-    }}
-          className="diskas" 
-          onMouseOver={props.listenOn}          
-          onMouseLeave={props.listenOff}  
-        >
-        </animated.div>
-        </a>
+          <a href="https://github.com/" target="blank"><FaGithub style={stylesFaGithub}/></a>
+          <a href="https://github.com/" target="blank"><MdWebAsset style={stylesMdWeb}/></a>
+
+
+
 
     <div id="cardChild" className="decorationalWindow"></div>
     </animated.div>
