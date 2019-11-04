@@ -5,6 +5,33 @@ import Card from "./Card"
 
 
 //import '../App.css';
+const firstCard={
+	projectName:"JavaScript Calculator",
+	gitLink:"https://github.com/TomasVis/calculator",
+	liveLink:"https://retro-calculator.herokuapp.com/",
+
+	className:"card1" 
+
+}
+const secondCard={
+	projectName:"Url Shortener",
+	gitLink:"https://github.com/TomasVis/calculator",
+	liveLink:"https://retro-calculator.herokuapp.com/",
+
+	className:"card2" 
+
+}
+const thirdCard={
+	projectName:"Wordpress page",
+	gitLink:"https://github.com/TomasVis/calculator",
+	liveLink:"https://retro-calculator.herokuapp.com/",
+
+	className:"card3" 
+
+}
+
+
+
 
 
 function Projects(props) {
@@ -19,7 +46,7 @@ function Projects(props) {
 	        onMouseLeave={props.onMouseLeave}
 	        id={0} >
 
-			<Card  id={0} {...props}/>
+			<Card {...firstCard} id={0} isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
 		</div>
 	  	<div  
 	  		className="cardWrapper"
@@ -27,7 +54,7 @@ function Projects(props) {
 	        onMouseLeave={props.onMouseLeave}
 	        id={1} >
 	          
-			<Card  id={1} {...props}/>
+			<Card  {...secondCard}id={1} isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
 		</div>
 		
 	  	<div  
@@ -35,7 +62,7 @@ function Projects(props) {
 	  		onMouseOver={props.onMouseOver}          
 	        onMouseLeave={props.onMouseLeave}
 	        id={2} >
-			<Card  id={2}{...props}/>
+			<Card {...thirdCard} id={2}isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
 	    </div>
     </div>
   );

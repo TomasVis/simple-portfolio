@@ -17,9 +17,9 @@ class App extends React.Component {
     this.state = {
 
       isOnHover:false,
-      cardInFocus: -1,
-      isTestOnHover:false,
-      testCounter: 0
+      cardInFocus: -1
+/*      isTestOnHover:false,
+      testCounter: 0*/
 
 
     };
@@ -27,29 +27,29 @@ class App extends React.Component {
 
     this.handleMouseOver = this.handleMouseOver.bind(this);
     this.handleMouseLeave = this.handleMouseLeave.bind(this);
-    this.handleTestClick = this.handleTestClick.bind(this);
+/*    this.handleTestClick = this.handleTestClick.bind(this);*/
 
 
-    this.listenOff = this.listenOff.bind(this);
-    this.listenOn = this.listenOn.bind(this);
+/*    this.listenOff = this.listenOff.bind(this);
+    this.listenOn = this.listenOn.bind(this);*/
 
 
 
   }
 
-  listenOff(){
+/*  listenOff(){
     console.log("listenOn")
     this.setState({isTestOnHover:false})
   }
   listenOn(){
     console.log("listenOff")
     this.setState({isTestOnHover:true})
-  }
-  handleTestClick(){
+  }*/
+/*  handleTestClick(){
     this.setState({
       isTestOnHover:!this.state.isTestOnHover
     })
-  }
+  }*/
     handleMouseOver(e){
 
    // console.log( e.currentTarget.id)
@@ -76,11 +76,10 @@ class App extends React.Component {
       title={`Props through render`}
       onMouseOver={this.handleMouseOver}          
       onMouseLeave={this.handleMouseLeave} 
-      listenOn={this.listenOn} 
-      listenOff={this.listenOff}   
+ 
       cardInFocus={this.state.cardInFocus} 
       isOnHover = {this.state.isOnHover} 
-      isTestOnHover = {this.state.isTestOnHover} />}
+ />}
    />
   <Route path="/projects"
     render={(props) => <Projects {...props}
@@ -88,11 +87,10 @@ class App extends React.Component {
       title={`Props through render`}
       onMouseOver={this.handleMouseOver}          
       onMouseLeave={this.handleMouseLeave} 
-      listenOn={this.listenOn} 
-      listenOff={this.listenOff}   
+  
       cardInFocus={this.state.cardInFocus} 
       isOnHover = {this.state.isOnHover} 
-      isTestOnHover = {this.state.isTestOnHover} />}
+/>}
    />
   <Route path="/contacts" exact component={Contacts}/>
 
