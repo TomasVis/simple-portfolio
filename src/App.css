@@ -105,11 +105,11 @@ body,
   background-size: cover;
 }
 
-.back {
+.front {
   background-image: url(./assets/card-withMountain.jpg);
 }
 
-.front {
+.back {
   background-image: url(./assets/card-with-buildings.jpg);
 }
 .flippedCardWrapper{
@@ -135,4 +135,14 @@ a{
 a:hover {
   color: #38a7ba;
   fill: #38a7ba;
+}
+.contForCards{  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+.contactsCard{
+  background-image: url(./assets/card-with-buildings.jpg);
 }

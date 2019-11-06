@@ -1,9 +1,12 @@
 import { render } from 'react-dom'
 import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
+import FlippedFront from './FlippedFront';
+import FlippedBack from './FlippedBack';
 
 
-function FlipCard() {
+function FlipCard(props) {
+  //console.log(props)
   const [flipped, set] = useState(false)
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
@@ -12,16 +15,12 @@ function FlipCard() {
   })
   return (
     <div className='flippedCardWrapper' onMouseOver={() => set(state => !state)} onMouseLeave={() => set(state => !state)}>
-      <animated.div class="c back" style={{ opacity: opacity.interpolate(o => 1 - o), transform }} >
-        <div style={{color:"white"}}>Hi</div>
-        <div style={{color:"white"}}>My Name is Tomas</div>
-        <div style={{color:"white"}}>I like CODDING</div>
+      <animated.div className={props.reversecards==1?"c back":"c front"} style={{ opacity: opacity.interpolate(o => 1 - o), transform }} >
+<FlippedFront{...props}/>
       </animated.div>
 
-      <animated.div class="c front" style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }} >
-        <div style={{color:"#38a7ba",position:"absolute",right:"20px"}}>Enjoy  working with MERN Stack</div>
-        <div style={{color:"#38a7ba",position:"absolute",right:"20px",top:"40px"}}>Focused on Front End</div>
-        <div style={{color:"#38a7ba",position:"absolute",right:"20px",top:"80px"}}>Passionate about My Work</div>
+      <animated.div className={props.reversecards==1?"c front":"c back"} style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }} >
+<FlippedBack{...props}/>
       </animated.div>
     </div>
   )

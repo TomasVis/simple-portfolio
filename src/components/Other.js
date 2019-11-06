@@ -34,10 +34,6 @@ const textsBack=[
 "Learning",
 "MERN",
 "stack"
-
-
-
-
 ]
 
 
@@ -49,22 +45,23 @@ const styles = {
   justifyContent: "center"}
 function Projects(props) {
 	//console.log(props)
-  return (
-    <div className="contForCards"  
-    	
-    	onMouseOver={props.onMouseOver}          
-          onMouseLeave={props.onMouseLeave}
-          id={props.id} >
+	return (
+	    <div 
+	    className="contForCards"  
+	    onMouseOver={props.onMouseOver}          
+	    onMouseLeave={props.onMouseLeave}
+	    id={props.id} 
+	    >
 
-<FlipCard  
-{...props} 
-  stylesFront={stylesFront} 
-  stylesBack={stylesBack}
-  textsBack={textsBack} 
-  textsFront={textsFront} 
-  reversecards={0}
-/>
-    </div>
+			<FlipCard  
+				{...props} 
+				stylesFront={stylesFront} 
+				stylesBack={stylesBack}
+				textsBack={textsBack} 
+				textsFront={textsFront} 
+				reversecards={0}
+			/>
+    	</div>
   );
 }
 

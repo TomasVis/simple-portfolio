@@ -1,24 +1,58 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
+import Card from "./Card"
+import FlipCard from './FlipCard';
 
-import '../App.css';
-import {Link} from 'react-router-dom';
 
-function Contacts() {
+const stylesFront=[
+  {position:"absolute",top:"30px",left:"80px",color:"white"},
+  {position:"absolute",top:"50px",left:"130px",color:"white"},
+  {position:"absolute",top:"50px",left:"220px",color:"#38a7ba"},
+  {position:"absolute",top:"160px",left:"30px",color:"white"},
+  {position:"absolute",top:"160px",left:"70px",color:"#38a7ba"}
+]
+const textsFront=[
+"Hi",
+"My Name is ",
+"Tomas",
+"I like ",
+"Codding"
 
-	useEffect(() =>{
-fetchItems()
-	},[]);
-	const [items, setItems] = useState([]);
+]
+const stylesBack=[
+  {position:"absolute",top:"30px",left:"80px",color:"white"},
+  {position:"absolute",top:"50px",left:"130px",color:"white"},
+  {position:"absolute",top:"50px",left:"220px",color:"#38a7ba"},
+  {position:"absolute",top:"160px",left:"30px",color:"white"},
+  {position:"absolute",top:"160px",left:"70px",color:"#38a7ba"},
+  {position:"absolute",top:"160px",left:"70px",color:"#38a7ba"}
+]
 
-	const fetchItems = async () =>{
-		const data = await fetch("https://fortnite-api.theapinetwork.com/upcoming/get")
-		
-		const items = await data.json();
-		console.log(items.items)
-		setItems(items.items);
-	}
+
+const textsBack=[
+"Learning",
+"MERN",
+"stack",
+"focusing on Front",
+ "End",
+ "Passionate about My Work"
+
+
+]
+
+function Contacts(props) {
+	//console.log(props)
   return (
-    <div>Contacts
+    <div  className="contForCards ">
+   	
+
+<div  
+	  		className="cardWrapper"
+	  		onMouseOver={props.onMouseOver}          
+	        onMouseLeave={props.onMouseLeave}
+	        id={0} >
+	          
+			<Card  className="contactsCard" id={0} isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
+		</div>
     </div>
   );
 }

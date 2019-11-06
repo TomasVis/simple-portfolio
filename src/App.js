@@ -5,6 +5,7 @@ import Nav from './components/Nav';
 import Projects from './components/Projects';
 import Contacts from './components/Contacts';
 import Home from './components/Home';
+import Other from './components/Other';
 
 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
@@ -13,10 +14,10 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 class App extends React.Component {
 
   constructor(props) {
-    super(props);
+       super(props);
     this.state = {
 
-      isOnHover:false,
+          isOnHover:false,
       cardInFocus: -1
 /*      isTestOnHover:false,
       testCounter: 0*/
@@ -91,8 +92,28 @@ class App extends React.Component {
       cardInFocus={this.state.cardInFocus} 
       isOnHover = {this.state.isOnHover} 
 />}
+   />  
+   <Route path="/other"
+    render={(props) => <Other {...props}
+
+      title={`Props through render`}
+      onMouseOver={this.handleMouseOver}          
+      onMouseLeave={this.handleMouseLeave} 
+  
+      cardInFocus={this.state.cardInFocus} 
+      isOnHover = {this.state.isOnHover} 
+/>}
    />
-  <Route path="/contacts" exact component={Contacts}/>
+  <Route path="/contacts"     render={(props) => <Contacts {...props}
+    exact
+      id={0}
+      title={`Props through render`}
+      onMouseOver={this.handleMouseOver}          
+      onMouseLeave={this.handleMouseLeave} 
+ 
+      cardInFocus={this.state.cardInFocus} 
+      isOnHover = {this.state.isOnHover} 
+ />}/>
 
 </Switch>
 </div>
