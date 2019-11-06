@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from "./Card"
 import FlipCard from './FlipCard';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 
 
 const stylesFront=[
@@ -38,6 +40,11 @@ const textsBack=[
 
 
 ]
+const components = [
+
+<a href="https://www.linkedin.com/" target="_blank" ><FaLinkedin/></a>,
+<a href="https://www.github.com/TomasVis" target="_blank" ><FaGithub/></a>
+]
 
 function Contacts(props) {
 	//console.log(props)
@@ -51,7 +58,7 @@ function Contacts(props) {
 	        onMouseLeave={props.onMouseLeave}
 	        id={0} >
 	          
-			<Card  className="contactsCard" id={0} isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
+			<Card components={components} className="contactsCard" id={0} isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
 		</div>
     </div>
   );
