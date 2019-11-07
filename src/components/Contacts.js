@@ -3,6 +3,8 @@ import Card from "./Card"
 import FlipCard from './FlipCard';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
+import { MdWork } from 'react-icons/md';
 
 
 const stylesFront=[
@@ -43,7 +45,9 @@ const textsBack=[
 const components = [
 
 <a href="https://www.linkedin.com/" target="_blank" ><FaLinkedin/></a>,
-<a href="https://www.github.com/TomasVis" target="_blank" ><FaGithub/></a>
+<a href="https://www.github.com/TomasVis" target="_blank" ><FaGithub/></a>,
+<a href="https://www.github.com/TomasVis" target="_blank" ><MdEmail/> write me an email</a>,
+<a href="https://www.github.com/TomasVis" target="_blank" ><MdWork/> download resume</a>
 ]
 
 function Contacts(props) {

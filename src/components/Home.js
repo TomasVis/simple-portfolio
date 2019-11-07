@@ -4,7 +4,7 @@ import FlipCard from './FlipCard';
 const stylesFront=[
   {position:"absolute",top:"30px",left:"80px",color:"white"},
   {position:"absolute",top:"50px",left:"130px",color:"white"},
-  {position:"absolute",top:"50px",left:"220px",color:"#38a7ba"},
+  {position:"absolute",top:"50px",left:"225px",color:"#38a7ba"},
   {position:"absolute",top:"160px",left:"30px",color:"white"},
   {position:"absolute",top:"160px",left:"70px",color:"#38a7ba"}
 ]
@@ -19,7 +19,7 @@ const textsFront=[
 const stylesBack=[
   {position:"absolute",top:"20px",left:"220px",color:"white"},
   {position:"absolute",top:"80px",left:"190px",color:"white"},
-  {position:"absolute",top:"80px",left:"310px",color:"#38a7ba"},
+  {position:"absolute",top:"80px",left:"320px",color:"#38a7ba"},
   {position:"absolute",top:"190px",left:"190px",color:"white"},
   {position:"absolute",top:"190px",left:"260px",color:"#38a7ba"},
   {position:"absolute",top:"190px",left:"310px",color:"white"}
@@ -28,8 +28,8 @@ const stylesBack=[
 
 
 const textsBack=[
- "Passionate about My Work",
-"I focus on Front",
+ "Passionate about My Work ",
+"I focus on Front ",
  "End",
 "Learning",
 "MERN",

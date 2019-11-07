@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactTooltip from 'react-tooltip'
 //import Card from "./Card"
 import FlipCard from './FlipCard';
 import Card from "./Card";
@@ -12,6 +13,7 @@ import { FaWordpress } from 'react-icons/fa';
 import { FaSass } from 'react-icons/fa';
 import { FaPhp } from 'react-icons/fa';
 import { DiMysql } from 'react-icons/di';
+import { DiPhotoshop } from 'react-icons/di';
 
 const stylesFaGithub = {color:"white",position:"static",top:"0", left:"0",height:"1.5em",width:"1.5em"}
 const stylesMdWeb = {display:"flex",color:"white",position:"absolute",top:"60px", left:"80px",height:"1.5em",width:"1.5em"}
@@ -20,6 +22,7 @@ const firstIconStyles = {color:"#38a7ba",position:"absolute",bottom:"60px", left
 const secondIconStyles = {color:"#38a7ba",position:"absolute",bottom:"50px", left:"80px",height:"1.5em",width:"1.5em"}
 const thirdIconStyles = {color:"#38a7ba",position:"absolute",bottom:"40px", left:"120px",height:"1.5em",width:"1.5em"}
 const fourthIconStyles = {color:"#38a7ba",position:"absolute",bottom:"40px", left:"160px",height:"1.5em",width:"1.5em"}
+const fifthIconStyles = {color:"#38a7ba",position:"absolute",bottom:"30px", left:"200px",height:"1.5em",width:"1.5em"}
 //const stylesForLinks = {position:"absolute",top:"50px", left:"40px"}
 //import '../App.css';
 const firstCard={
@@ -37,7 +40,7 @@ const secondCard={
 const thirdCard={
 	projectName:"Wordpress page",
 	gitLink:"https://github.com/TomasVis/calculator",
-	liveLink:"https://retro-calculator.herokuapp.com/",
+	liveLink:"https://tomas.trial.rocks/project-wp",
 
 }
 const icons = [
@@ -52,9 +55,11 @@ const iconsWP = [
 		<FaWordpress style={firstIconStyles}/>,
         <FaSass style={secondIconStyles}/>,
         <FaPhp style={thirdIconStyles}/>,
-        <DiMysql style={fourthIconStyles}/>
+        <DiMysql style={fourthIconStyles}/>,
+        <DiPhotoshop style={fifthIconStyles}/>
 
 ]
+
 
 
 function Projects(props) {
@@ -64,11 +69,14 @@ function Projects(props) {
 
 
 	    <div
+	    	data-tip="Just another javascript calculatorJust"
 	    	className="cardWrapper"
 	      	onMouseOver={props.onMouseOver}          
 	        onMouseLeave={props.onMouseLeave}
 	        id={0} >
 
+
+			<ReactTooltip delayShow={500} place="right" type="dark" effect="solid"/>
 			<Card components={icons} links={<NameAndLinks {...firstCard}/>} className="card1" id={0}isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
 		</div>
 	  	<div  
@@ -80,11 +88,13 @@ function Projects(props) {
 			<Card components={icons} links={<NameAndLinks {...secondCard}/>} className="card2" id={1}isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
 		</div>
 		
-	  	<div  
+	  	<div
+	  		data-tip="The design was sliced and hand coded into a fully functional WordPress site"  
 			className="cardWrapper"
 	  		onMouseOver={props.onMouseOver}          
 	        onMouseLeave={props.onMouseLeave}
 	        id={2} >
+	        <ReactTooltip delayShow={500} place="right" type="dark" effect="solid"/>
 			<Card components={iconsWP} links={<NameAndLinks {...thirdCard}/>} className="card3" id={2}isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
 	    </div>
     </div>

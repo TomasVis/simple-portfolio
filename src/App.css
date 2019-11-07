@@ -9,6 +9,8 @@
 * * * * * * * * * { background-color: rgba(0,0,255,.2); }*/
 html,body,#root {
   height: 100%;
+  font-family: 'Fjalla One', sans-serif;
+font-family: 'Work Sans', sans-serif;
 }
 
 .mainContainer{
