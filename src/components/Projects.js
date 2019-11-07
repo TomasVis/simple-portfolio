@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactTooltip from 'react-tooltip'
+
 //import Card from "./Card"
 import FlipCard from './FlipCard';
 import Card from "./Card";
@@ -28,7 +28,7 @@ const fifthIconStyles = {color:"#38a7ba",position:"absolute",bottom:"30px", left
 const firstCard={
 	projectName:"JavaScript Calculator",
 	gitLink:"https://github.com/TomasVis/calculator",
-	liveLink:"https://retro-calculator.herokuapp.com/",
+	liveLink:"https://javascript-calculator-258317.appspot.com/",
 
 }
 const secondCard={
@@ -39,7 +39,7 @@ const secondCard={
 }
 const thirdCard={
 	projectName:"Wordpress page",
-	gitLink:"https://github.com/TomasVis/calculator",
+	gitLink:"https://github.com/TomasVis/project-wp",
 	liveLink:"https://tomas.trial.rocks/project-wp",
 
 }
@@ -69,14 +69,14 @@ function Projects(props) {
 
 
 	    <div
-	    	data-tip="Just another javascript calculatorJust"
+
 	    	className="cardWrapper"
 	      	onMouseOver={props.onMouseOver}          
 	        onMouseLeave={props.onMouseLeave}
 	        id={0} >
 
 
-			<ReactTooltip delayShow={500} place="right" type="dark" effect="solid"/>
+
 			<Card components={icons} links={<NameAndLinks {...firstCard}/>} className="card1" id={0}isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
 		</div>
 	  	<div  
@@ -89,12 +89,12 @@ function Projects(props) {
 		</div>
 		
 	  	<div
-	  		data-tip="The design was sliced and hand coded into a fully functional WordPress site"  
+
 			className="cardWrapper"
 	  		onMouseOver={props.onMouseOver}          
 	        onMouseLeave={props.onMouseLeave}
 	        id={2} >
-	        <ReactTooltip delayShow={500} place="right" type="dark" effect="solid"/>
+
 			<Card components={iconsWP} links={<NameAndLinks {...thirdCard}/>} className="card3" id={2}isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
 	    </div>
     </div>
