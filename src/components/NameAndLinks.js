@@ -19,7 +19,7 @@ const stylesForLinks = {position:"absolute",top:"50px", left:"40px"}
 //let images = [calculator,calculator,calculator];
 
 function NameAndLinks(props) {
-	console.log(props)
+	//console.log(props)
   return (
   	<div >
 		<h4 style={{position:"absolute",top:"15px",left:"15px",color:"#38a7ba",margin:0}}>{props.projectName}</h4>

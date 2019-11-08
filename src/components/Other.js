@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from "./Card"
+/*import Card from "./Card"*/
 import FlipCard from './FlipCard';
 const stylesFront=[
   {position:"absolute",top:"30px",left:"80px",color:"white"},
@@ -36,13 +36,13 @@ const textsBack=[
 "stack"
 ]
 
-
+/*
 const styles = {  
 	width: "100%",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  justifyContent: "center"}
+  justifyContent: "center"}*/
 function Projects(props) {
 	//console.log(props)
 	return (

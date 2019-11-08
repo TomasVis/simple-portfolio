@@ -1,4 +1,4 @@
-import { render } from 'react-dom'
+
 import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 import FlippedFront from './FlippedFront';
@@ -6,7 +6,7 @@ import FlippedBack from './FlippedBack';
 
 
 function FlipCard(props) {
-  //console.log(props)
+
   const [flipped, set] = useState(false)
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
@@ -15,11 +15,11 @@ function FlipCard(props) {
   })
   return (
     <div className='flippedCardWrapper' onMouseOver={() => set(state => !state)} onMouseLeave={() => set(state => !state)}>
-      <animated.div className={props.reversecards==1?"c back":"c front"} style={{ opacity: opacity.interpolate(o => 1 - o), transform }} >
+      <animated.div className={props.reversecards===1?"c back":"c front"} style={{ opacity: opacity.interpolate(o => 1 - o), transform }} >
 <FlippedFront{...props}/>
       </animated.div>
 
-      <animated.div className={props.reversecards==1?"c front":"c back"} style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }} >
+      <animated.div className={props.reversecards===1?"c front":"c back"} style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }} >
 <FlippedBack{...props}/>
       </animated.div>
     </div>

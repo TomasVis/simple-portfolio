@@ -14,6 +14,7 @@ import { FaSass } from 'react-icons/fa';
 import { FaPhp } from 'react-icons/fa';
 import { DiMysql } from 'react-icons/di';
 import { DiPhotoshop } from 'react-icons/di';
+import { DiJqueryLogo } from 'react-icons/di';
 
 const stylesFaGithub = {color:"white",position:"static",top:"0", left:"0",height:"1.5em",width:"1.5em"}
 const stylesMdWeb = {display:"flex",color:"white",position:"absolute",top:"60px", left:"80px",height:"1.5em",width:"1.5em"}
@@ -32,9 +33,9 @@ const firstCard={
 
 }
 const secondCard={
-	projectName:"Url Shortener",
-	gitLink:"https://github.com/TomasVis/calculator",
-	liveLink:"https://retro-calculator.herokuapp.com/",
+	projectName:"Url Shortener microservice",
+	gitLink:"https://github.com/TomasVis/urlShortener",
+	liveLink:"https://shortener-er.herokuapp.com/",
 
 }
 const thirdCard={
@@ -43,11 +44,31 @@ const thirdCard={
 	liveLink:"https://tomas.trial.rocks/project-wp",
 
 }
-const icons = [
+const fourthdCard={
+	projectName:"Quote Generator",
+	gitLink:"https://github.com/TomasVis/quotes",
+	liveLink:"https://quote-generator-258414.appspot.com/",
+
+}
+
+const firstCardIcons = [
+
+
+        <DiReact style={firstIconStyles}/>
+
+]
+const secondCardIcons = [
 
 		<DiNodejs style={{color:"#38a7ba",position:"absolute",bottom:"60px", left:"30px",height:"2.5em",width:"2.5em"}}/>,
         <DiMongodb style={secondIconStyles}/>,
         <DiReact style={thirdIconStyles}/>
+
+]
+const iconsQuotes = [
+
+		<DiReact style={firstIconStyles}/>,
+        <DiJqueryLogo style={secondIconStyles}/>,
+
 
 ]
 const iconsWP = [
@@ -77,7 +98,7 @@ function Projects(props) {
 
 
 
-			<Card components={icons} links={<NameAndLinks {...firstCard}/>} className="card1" id={0}isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
+			<Card components={firstCardIcons} links={<NameAndLinks {...firstCard}/>} className="card1" id={0}isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
 		</div>
 	  	<div  
 	  		className="cardWrapper"
@@ -85,7 +106,7 @@ function Projects(props) {
 	        onMouseLeave={props.onMouseLeave}
 	        id={1} >
 	          
-			<Card components={icons} links={<NameAndLinks {...secondCard}/>} className="card2" id={1}isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
+			<Card components={secondCardIcons} links={<NameAndLinks {...secondCard}/>} className="card2" id={1}isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
 		</div>
 		
 	  	<div
@@ -96,6 +117,15 @@ function Projects(props) {
 	        id={2} >
 
 			<Card components={iconsWP} links={<NameAndLinks {...thirdCard}/>} className="card3" id={2}isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
+	    </div>
+	    <div
+
+			className="cardWrapper"
+	  		onMouseOver={props.onMouseOver}          
+	        onMouseLeave={props.onMouseLeave}
+	        id={3} >
+
+			<Card components={iconsQuotes} links={<NameAndLinks {...fourthdCard}/>} className="card4" id={3}isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
 	    </div>
     </div>
   );
