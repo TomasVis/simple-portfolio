@@ -106,7 +106,7 @@ body,
   max-height: 230px;
   width: 50ch;
   height: 50ch;
-  cursor: pointer;
+/*  cursor: pointer;*/
   will-change: transform, opacity;
 }
 .c {
@@ -133,7 +133,7 @@ body,
   max-height: 230px;
   width: 50ch;
   height: 50ch;
-  cursor: pointer;
+/*  cursor: pointer;*/
   will-change: transform, opacity;
 }
 .git-hub-button{
@@ -159,5 +159,17 @@ a:hover {
   justify-content: center
 }
 .contactsCard{
-  background-image: url(./assets/card-with-buildings.jpg);
+  background-image: url(./assets/card-contacts.jpg);
+}
+.emailCard{
+  background-image: url(./assets/card-withMountain.jpg);
+}
+textarea {
+  color:#38a7ba;
+  background: #0f1a2a;;
+  resize: none;
+  margin:10px;
+}
+h3{
+  margin:5px;
 }

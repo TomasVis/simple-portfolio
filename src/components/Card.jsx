@@ -34,14 +34,14 @@ import { useSpring, animated } from 'react-spring'
   return (
     <animated.div  className={props.className+" card"} style={{ transform: val.scale.interpolate((s) =>{ return ` scale(${s})`})}}>
     
-    {props.links}
+      {props.links}
 
-     {props.components.map((comp,index) => (
-      <animated.div className="icon" key={index} style={{ opacity: valOp.opacity.interpolate((s) =>{ return s})}} >{comp}</animated.div>
-    ))}
+       {props.components != undefined ? props.components.map((comp,index) => (
+        <animated.div className="icon" key={index} style={{ opacity: valOp.opacity.interpolate((s) =>{ return s})}} >{comp}</animated.div>
+        )):""}
 
           
-      <animated.div className="icon"  style={{ opacity: valTextOp.opacity.interpolate((s) =>{ return s})}} >{props.descriptions}</animated.div>
+        <animated.div className="icon"  style={{ opacity: valTextOp.opacity.interpolate((s) =>{ return s})}} >{props.descriptions}</animated.div>
     
 
     </animated.div>

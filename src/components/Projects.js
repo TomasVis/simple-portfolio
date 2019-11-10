@@ -63,7 +63,7 @@ const secondCardIcons = [
 
 		<DiNodejs style={{color:"#38a7ba",position:"absolute",bottom:"60px", left:"30px",height:"2.5em",width:"2.5em"}}/>,
         <DiMongodb style={secondIconStyles}/>,
-        <DiReact style={thirdIconStyles}/>
+
 
 ]
 const iconsQuotes = [
@@ -101,7 +101,7 @@ function Projects(props) {
 
 
 			<Card 
-				descriptions={<p style={stylesForDescription}>Simple calculator<br /> has some bugs, but has a nice looking display</p>} 
+				descriptions={<p style={stylesForDescription}>Simple calculator<br /> has a nice looking display</p>} 
 				components={firstCardIcons} 
 				links={<NameAndLinks {...firstCard}/>} 
 				className="card1" 
