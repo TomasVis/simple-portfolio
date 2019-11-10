@@ -93,7 +93,7 @@ class App extends React.Component {
       isOnHover = {this.state.isOnHover} 
 />}
    />  
-   <Route path="/other"
+{/*   <Route path="/other"
     render={(props) => <Other {...props}
 
       title={`Props through render`}
@@ -102,7 +102,7 @@ class App extends React.Component {
   
       cardInFocus={this.state.cardInFocus} 
       isOnHover = {this.state.isOnHover} 
-/>}
+/>}*/}
    />
   <Route path="/contacts"     render={(props) => <Contacts {...props}
     exact

@@ -25,12 +25,12 @@ function NameAndLinks(props) {
 		<h4 style={{position:"absolute",top:"15px",left:"15px",color:"#38a7ba",margin:0}}>{props.projectName}</h4>
 		<div style={stylesForLinks}>
 		  <a style={{display:"flex",marginBottom:"10px"}} href={props.liveLink} target="blank">
-		    <MdWebAsset style={{marginRight:"10px",height:"1.5em",width:"1.5em"}}/> 
-		    <div style={{marginRight:"10px"}}>go to Live page</div>
+		    <MdWebAsset style={{marginRight:"10px",height:"1.5em",width:"1.5em"}}/>Live page 
+
 		  </a>
 		  <a style={{display:"flex",marginLeft:"20px"}} href={props.gitLink} target="blank">
-		    <FaGithub style={{marginRight:"10px",height:"1.5em",width:"1.5em"}}/> 
-		    <div>go to Code</div>
+		    <FaGithub style={{marginRight:"10px",height:"1.5em",width:"1.5em"}}/>Code 
+
 		  </a>
 
 		</div>

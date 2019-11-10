@@ -31,7 +31,7 @@ export default  class Form extends React.Component {
           placeholder="email@example.com"
           required
           value={this.state.email}
-          style={{width: '50%', height: '15px'}}
+          style={{width: '45%', height: '20px'}}
         />
       </div>
     	<input style={{marginLeft:"10px"}} type="button" value="Submit" className="btn btn--submit" onClick={this.handleSubmit} />

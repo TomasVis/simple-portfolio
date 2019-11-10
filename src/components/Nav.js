@@ -8,7 +8,7 @@ function Nav() {
 	}
   return (
     <nav >
-		<h3>Logo</h3>
+
 		<ul className="nav-links">
 			<Link style= {navStyle } to="/">
 				<li>Home</li>
@@ -16,9 +16,9 @@ function Nav() {
 			<Link style= {navStyle } to="/projects">
 				<li>Projects</li>
 			</Link>
-			<Link style= {navStyle } to="/other">
+{/*			<Link style= {navStyle } to="/other">
 				<li>Other</li>
-			</Link>
+			</Link>*/}
 			<Link style= {navStyle } to="/contacts">
 				<li>Contacts</li>
 			</Link>
