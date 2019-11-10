@@ -4,7 +4,7 @@ import React from 'react';
 
 
 function FlippedFront(props) {
-	console.log(props)
+	//console.log(props)
   return (
   	<div >
   	{props.textsFront.map((el, i) => {     

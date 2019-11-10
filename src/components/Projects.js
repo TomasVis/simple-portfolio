@@ -19,6 +19,8 @@ import { DiJqueryLogo } from 'react-icons/di';
 const stylesFaGithub = {color:"white",position:"static",top:"0", left:"0",height:"1.5em",width:"1.5em"}
 const stylesMdWeb = {display:"flex",color:"white",position:"absolute",top:"60px", left:"80px",height:"1.5em",width:"1.5em"}
 
+const stylesForDescription = {color:"#38a7ba",position:"absolute",left:"10px",bottom:"15px",width:"220px",fontSize:"0.8em"}
+
 const firstIconStyles = {color:"#38a7ba",position:"absolute",bottom:"60px", left:"30px",height:"2.5em",width:"1.5em"}
 const secondIconStyles = {color:"#38a7ba",position:"absolute",bottom:"50px", left:"80px",height:"1.5em",width:"1.5em"}
 const thirdIconStyles = {color:"#38a7ba",position:"absolute",bottom:"40px", left:"120px",height:"1.5em",width:"1.5em"}
@@ -98,7 +100,15 @@ function Projects(props) {
 
 
 
-			<Card components={firstCardIcons} links={<NameAndLinks {...firstCard}/>} className="card1" id={0}isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
+			<Card 
+				descriptions={<p style={stylesForDescription}>Simple calculator<br /> has some bugs, but has a nice looking display</p>} 
+				components={firstCardIcons} 
+				links={<NameAndLinks {...firstCard}/>} 
+				className="card1" 
+				id={0}
+				isOnHover={props.isOnHover} 
+				cardInFocus={props.cardInFocus}
+			/>
 		</div>
 	  	<div  
 	  		className="cardWrapper"
@@ -106,7 +116,16 @@ function Projects(props) {
 	        onMouseLeave={props.onMouseLeave}
 	        id={1} >
 	          
-			<Card components={secondCardIcons} links={<NameAndLinks {...secondCard}/>} className="card2" id={1}isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
+			<Card
+				descriptions={<p style={stylesForDescription}>Takes a long URL, returns short URL, uses Node.js and MongoDB<br/>
+				Deployed on Heroku</p>}  
+				components={secondCardIcons} 
+				links={<NameAndLinks {...secondCard}/>} 
+				className="card2" 
+				id={1}
+				isOnHover={props.isOnHover} 
+				cardInFocus={props.cardInFocus}
+			/>
 		</div>
 		
 	  	<div
@@ -116,7 +135,15 @@ function Projects(props) {
 	        onMouseLeave={props.onMouseLeave}
 	        id={2} >
 
-			<Card components={iconsWP} links={<NameAndLinks {...thirdCard}/>} className="card3" id={2}isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
+			<Card
+				descriptions={<p style={stylesForDescription}>Fully functional Word Press site</p>}  
+				components={iconsWP} 
+				links={<NameAndLinks {...thirdCard}/>} 
+				className="card3" 
+				id={2}
+				isOnHover={props.isOnHover} 
+				cardInFocus={props.cardInFocus}
+			/>
 	    </div>
 	    <div
 
@@ -125,7 +152,15 @@ function Projects(props) {
 	        onMouseLeave={props.onMouseLeave}
 	        id={3} >
 
-			<Card components={iconsQuotes} links={<NameAndLinks {...fourthdCard}/>} className="card4" id={3}isOnHover={props.isOnHover} cardInFocus={props.cardInFocus}/>
+			<Card
+				descriptions={<p style={stylesForDescription}>Makes an Ajax request to Forismatic API, returns a random quote and displays it </p>}  
+				components={iconsQuotes} 
+				links={<NameAndLinks {...fourthdCard}/>} 
+				className="card4" 
+				id={3}
+				isOnHover={props.isOnHover} 
+				cardInFocus={props.cardInFocus}
+			/>
 	    </div>
     </div>
   );
