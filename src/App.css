@@ -1,4 +1,4 @@
-* { background-color: rgba(255,0,0,.2); }
+/** { background-color: rgba(255,0,0,.2); }
 * * { background-color: rgba(0,255,0,.2); }
 * * * { background-color: rgba(0,0,255,.2); }
 * * * * { background-color: rgba(255,0,255,.2); }
@@ -6,18 +6,20 @@
 * * * * * * { background-color: rgba(255,255,0,.2); }
 * * * * * * * { background-color: rgba(255,0,0,.2); }
 * * * * * * * * { background-color: rgba(0,255,0,.2); }
-* * * * * * * * * { background-color: rgba(0,0,255,.2); }
+* * * * * * * * * { background-color: rgba(0,0,255,.2); }*/
 html,body,#root {
   height: 100%;
+  width:100%;
   font-family: 'Fjalla One', sans-serif;
 font-family: 'Work Sans', sans-serif;
 }
 
 .mainContainer{
-display: flex;
-min-height: 100%;
+  display: flex;
+  min-height: 100%;
 }
 .contForCards{  
+  margin-top:50px;
 /*  min-height: 100%;
   min-width: calc(100% + 150px);*/
   width: 100%;
@@ -29,28 +31,38 @@ min-height: 100%;
 }
 
 nav{
-  position: relative;
-  min-height: 100%;
+
+  z-index: 1;
+  position: fixed;
+  min-height: 50px;
+  display: flex;
+  justify-content: flex-end;
 /*  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;*/
 
-  width: 120px;
-  background: #0f1a2a;
-  color:#38a7ba;
+  min-width: 100%;
+/*  background: #0f1a2a;*/
+/*  background:#38a7ba;*/
+background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(15,26,42,1) 35%);
+
 
 }
 ul{
   padding: 0;
 }
+ul a{
+  margin:0px 10px 0px 10px;
+}
 .nav-links{
-  position: fixed;
-/*
-  width:40%;
+
+
+/*  width:40%;*/
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+/*  flex-direction: column;*/
+/*  justify-content: space-around;
   align-items: center;*/
   list-style: none;
 }
@@ -86,35 +98,7 @@ ul{
 .card4{
    background-image: url(./assets/card-with-quote.jpg);
 }
-/*.text-block{
-    width: 460px;
-    height: 130px;
-    bottom: 60px;
-    background-size: cover;
-    position: absolute;
-    background-image: url(./assets/text-part.png);
-    overflow: hidden;
-}*/
 
-/*html,
-body,
-#root {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  user-select: none;
-  background: #f0f0f0;
-}
-
-#root > div {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}*/
 
 .c {
   position: absolute;
@@ -186,32 +170,15 @@ a{
   text-decoration: none;
     display: flex;
   flex-direction: row;
-  justify-content: space-around;
+/*  justify-content: space-around;*/
   align-items: center;
 }
 
+
+
 @media all and (max-width: 640px) {
-  .mainContainer{
+  .card {
+    transform: scale(0.8);
 
-    display: flex;
-    flex-direction: column;
-  }
-  .contForCards{
-    display: inline-block;
-    min-height: 100%;
-  }
-  nav
-  {
-  min-height: 50px;
-/*  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;*/
-
-  width: 100%;
-
-  }
-  ul{
-    padding: 0;
   }
 }

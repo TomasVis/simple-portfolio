@@ -38,10 +38,16 @@ import { useSpring, animated } from 'react-spring'
 
        {props.components != undefined ? props.components.map((comp,index) => (
         <animated.div className="icon" key={index} style={{ opacity: valOp.opacity.interpolate((s) =>{ return s})}} >{comp}</animated.div>
-        )):""}
+        )):null}
 
+
+{props.descriptions != undefined ?
+        <animated.div className="description"  style={{ opacity: valTextOp.opacity.interpolate((s) =>{ return s})}} >{props.descriptions}</animated.div>
+:
+null
+
+ }
           
-        <animated.div className="icon"  style={{ opacity: valTextOp.opacity.interpolate((s) =>{ return s})}} >{props.descriptions}</animated.div>
     
 
     </animated.div>
