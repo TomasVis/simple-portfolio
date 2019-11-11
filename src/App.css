@@ -86,16 +86,16 @@ ul a{
 .cardWrapper{
   margin:40px;
 }
-.card1{
+.cardCalc{
    background-image: url(./assets/card-calculator.jpg);
 }
-.card2{
+.cardUrl{
    background-image: url(./assets/card-url.jpg);
 }
-.card3{
+.cardWP{
    background-image: url(./assets/card-wordpress.jpg);
 }
-.card4{
+.cardQuotes{
    background-image: url(./assets/card-with-quote.jpg);
 }
 
@@ -177,8 +177,5 @@ a{
 
 
 @media all and (max-width: 640px) {
-  .card {
-    transform: scale(0.8);
 
-  }
 }
