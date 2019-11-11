@@ -1,12 +1,8 @@
 import React from 'react';
 
-//import Card from "./Card"
-import FlipCard from './FlipCard';
 import Card from "./Card";
 import NameAndLinks from "./NameAndLinks"
 import { DiNodejs } from 'react-icons/di';
-import { FaGithub } from 'react-icons/fa';
-import { MdWebAsset } from 'react-icons/md';
 import { DiMongodb } from 'react-icons/di';
 import { DiReact } from 'react-icons/di';
 import { FaWordpress } from 'react-icons/fa';
@@ -16,10 +12,9 @@ import { DiMysql } from 'react-icons/di';
 import { DiPhotoshop } from 'react-icons/di';
 import { DiJqueryLogo } from 'react-icons/di';
 
-const stylesFaGithub = {color:"white",position:"static",top:"0", left:"0",height:"1.5em",width:"1.5em"}
-const stylesMdWeb = {display:"flex",color:"white",position:"absolute",top:"60px", left:"80px",height:"1.5em",width:"1.5em"}
 
-const stylesForDescription = {color:"#38a7ba",position:"absolute",left:"10px",bottom:"15px",width:"220px",fontSize:"0.8em"}
+
+const stylesForDescription = {color:"#38a7ba",position:"absolute",left:"10px",bottom:"15px",width:"280px",fontSize:"0.8em"}
 
 const firstIconStyles = {color:"#38a7ba",position:"absolute",bottom:"60px", left:"30px",height:"2.5em",width:"1.5em"}
 const secondIconStyles = {color:"#38a7ba",position:"absolute",bottom:"50px", left:"80px",height:"1.5em",width:"1.5em"}
@@ -120,7 +115,7 @@ function Projects(props) {
 	          
 
 				        			<Card
-				descriptions={<p style={stylesForDescription}>Makes an Ajax request to Forismatic API, returns a random quote and displays it </p>}  
+				descriptions={<p style={stylesForDescription}>Makes an Ajax request to Forismatic API<br/> and displayes the returned quote </p>}  
 				components={iconsQuotes} 
 				links={<NameAndLinks {...linksQuotes}/>} 
 				className="cardQuotes" 
@@ -139,8 +134,10 @@ function Projects(props) {
 
 
 						<Card
-				descriptions={<p style={stylesForDescription}>Takes a long URL, returns short URL, uses Node.js and MongoDB<br/>
-				Deployed on Heroku</p>}  
+				descriptions={<p style={stylesForDescription}>
+					Takes URL<br/> and returns a short code<br/> 
+					
+					Deployed on Heroku</p>}  
 				components={iconsUrlShortener} 
 				links={<NameAndLinks {...linksUrlShortener}/>} 
 				className="cardUrl" 
@@ -158,7 +155,7 @@ function Projects(props) {
 
 
 						<Card 
-				descriptions={<p style={stylesForDescription}>Simple calculator<br /> has a nice looking display</p>} 
+				descriptions={<p style={stylesForDescription}>Simple calculator<br /> Has a gloving display</p>} 
 				components={iconsCalculator} 
 				links={<NameAndLinks {...linksCalculator}/>} 
 				className="cardCalc" 

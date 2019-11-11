@@ -5,7 +5,7 @@ import Nav from './components/Nav';
 import Projects from './components/Projects';
 import Contacts from './components/Contacts';
 import Home from './components/Home';
-import Other from './components/Other';
+
 
 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'

@@ -14,7 +14,7 @@ function FlipCard(props) {
     config: { mass: 5, tension: 500, friction: 80 }
   })
   return (
-    <div className='flippedCardWrapper' onMouseOver={() => set(state => !state)} onMouseLeave={() => set(state => !state)}>
+    <div className='flippedCardWrapper' onMouseOver={() => set(state => !state)} onMouseOut={() => set(state => !state)}>
       <animated.div className={props.reversecards===1?"c back":"c front"} style={{ opacity: opacity.interpolate(o => 1 - o), transform }} >
 <FlippedFront{...props}/>
       </animated.div>

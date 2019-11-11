@@ -159,7 +159,7 @@ a:hover {
 }
 textarea {
   color:#38a7ba;
-  background: #0f1a2a;;
+  background: #0f1a2a;
   resize: none;
   margin:10px;
 }
@@ -173,7 +173,30 @@ a{
 /*  justify-content: space-around;*/
   align-items: center;
 }
-
+p{
+  margin:0;
+}
+.linkInHome{
+  pointer-events: auto;
+  margin-left:5px;
+  color:white;
+   background-color:#38a7ba;
+/*   border:solid 2px #38a7ba;*/
+   border-radius: 5px;
+}
+.linkInHome:hover{
+  pointer-events: auto;
+  margin-left:5px;
+  color:#38a7ba;
+   background-color:#0f1a2a;
+/*   border:solid 2px white;*/
+   border-radius: 5px;
+}
+.stylesForText{
+  display:flex;
+  position: absolute;
+  color:white;
+}
 
 
 @media all and (max-width: 640px) {

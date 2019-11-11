@@ -1,6 +1,7 @@
 import React from 'react';
 /*import Card from "./Card"*/
 import FlipCard from './FlipCard';
+import {Link} from 'react-router-dom'
 const stylesFront=[
   {position:"absolute",top:"30px",left:"80px",color:"white"},
   {position:"absolute",top:"50px",left:"130px",color:"white"},
@@ -17,37 +18,46 @@ const textsFront=[
 
 ]
 const stylesBack=[
-  {position:"absolute",top:"20px",left:"220px",color:"white"},
-  {position:"absolute",top:"80px",left:"190px",color:"white"},
-  {position:"absolute",top:"80px",left:"320px",color:"#38a7ba"},
-  {position:"absolute",top:"190px",left:"190px",color:"white"},
-  {position:"absolute",top:"190px",left:"260px",color:"#38a7ba"},
-  {position:"absolute",top:"190px",left:"310px",color:"white"}
-
-]
-
-
-const textsBack=[
- "Passionate about My Work ",
-"I focus on Front ",
- "End",
-"Learning",
-"MERN",
-"stack"
-
+  {width:"250px",position:"absolute",top:"20px",left:"220px",color:"white"},
+  {width:"200px",position:"absolute",top:"80px",left:"190px",color:"white"},
+  {width:"200px",position:"absolute",top:"160px",left:"260px",color:"#38a7ba"},
+  {width:"200px",position:"absolute",top:"190px",left:"120px",color:"white"},
 
 
 
 ]
+/*
+  <Link style= {navStyle } to="/projects">
+          <li>Projects</li>
+        </Link>
 
+        <Link style= {navStyle } to="/contacts">
+          <li>Contacts</li>
+        </Link>
+        */
 
-/*const styles = {  
-	width: "100%",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center"
-}*/
+const textsBack=
+[
+  <div className="stylesForText"   >
+    Passionate about My 
+      <Link to="/projects">
+          <div className="linkInHome"  style={{marginLeft:"5px",marginRight:"5px"}} >Work</div>
+      </Link>
+  </div>,
+
+  <div className="stylesForText" >I Focus on Front<div style={{ marginLeft:"5px",marginRight:"5px",color:"#38a7ba"}}>End</div></div>,
+
+  <div className="stylesForText" >
+    Feel free to
+      <Link to="/contacts">
+          <div className="linkInHome" style={{marginLeft:"5px",marginRight:"5px"}} >Contact</div>
+      </Link>me
+  </div>,
+
+  <div className="stylesForText" >Learning<div style={{marginLeft:"5px",marginRight:"5px",color:"#38a7ba"}}>MERN</div>Stack</div>,
+
+]
+
 
 
 function Projects(props) {
