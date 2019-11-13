@@ -60,7 +60,7 @@ const textsBack=
 
 
 
-function Projects(props) {
+function Home(props) {
 	//console.log(props)
   return (
     <div className="contForCards"  
@@ -81,4 +81,4 @@ function Projects(props) {
   );
 }
 
-export default Projects;
+export default Home;

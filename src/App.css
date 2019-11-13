@@ -176,8 +176,14 @@ a{
 p{
   margin:0;
 }
+.finnished{
+   pointer-events: auto;
+}
+.finnished:hover{
+ pointer-events: auto;
+}
 .linkInHome{
-  pointer-events: auto;
+ 
   margin-left:5px;
   color:white;
    background-color:#38a7ba;
@@ -185,7 +191,7 @@ p{
    border-radius: 5px;
 }
 .linkInHome:hover{
-  pointer-events: auto;
+ 
   margin-left:5px;
   color:#38a7ba;
    background-color:#0f1a2a;
