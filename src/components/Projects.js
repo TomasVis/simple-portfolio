@@ -155,7 +155,7 @@ function Projects(props) {
 
 
 						<Card 
-				descriptions={<p style={stylesForDescription}>Simple calculator<br /> Has a gloving display</p>} 
+				descriptions={<p style={stylesForDescription}>Simple calculator<br /> Has a glowing display</p>} 
 				components={iconsCalculator} 
 				links={<NameAndLinks {...linksCalculator}/>} 
 				className="cardCalc" 
