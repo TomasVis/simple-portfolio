@@ -14,7 +14,7 @@ const textsFront=[
 "My Name is ",
 "Tomas",
 "I like ",
-"Codding"
+"Coding"
 
 ]
 const stylesBack=[
