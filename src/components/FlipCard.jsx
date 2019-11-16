@@ -12,11 +12,13 @@ function FlipCard(props) {
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
     transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
-    config: { mass: 5, tension: 500, friction: 80 },onRest: flipped ? () => sete(state => state = flipped):() => sete(state => state = false)
+    config: { mass: 5, tension: 500, friction: 80 },onRest: flipped&&props.isOnHover ? () => sete(state => state = flipped):() => sete(state => state = false)
+
   })
-  //console.log(finnished)
+
+  console.log(finnished)
   return (
-    <div className='flippedCardWrapper' onMouseOver={() => set(state => !state)} onMouseOut={ () => set(state => !state) }>
+    <div className='flippedCardWrapper' onMouseOver={() => set(state => true)} onMouseOut={ () => set(state => false) }>
       <animated.div className={props.reversecards===1?"c back":"c front"} style={{ opacity: opacity.interpolate(o => 1 - o), transform }} >
         <FlippedFront{...props}/>
       </animated.div>
