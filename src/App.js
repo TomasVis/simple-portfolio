@@ -19,8 +19,7 @@ class App extends React.Component {
 
           isOnHover:false,
       cardInFocus: -1
-/*      isTestOnHover:false,
-      testCounter: 0*/
+
 
 
     };
@@ -28,29 +27,15 @@ class App extends React.Component {
 
     this.handleMouseOver = this.handleMouseOver.bind(this);
     this.handleMouseLeave = this.handleMouseLeave.bind(this);
-/*    this.handleTestClick = this.handleTestClick.bind(this);*/
 
 
-/*    this.listenOff = this.listenOff.bind(this);
-    this.listenOn = this.listenOn.bind(this);*/
+
 
 
 
   }
 
-/*  listenOff(){
-    console.log("listenOn")
-    this.setState({isTestOnHover:false})
-  }
-  listenOn(){
-    console.log("listenOff")
-    this.setState({isTestOnHover:true})
-  }*/
-/*  handleTestClick(){
-    this.setState({
-      isTestOnHover:!this.state.isTestOnHover
-    })
-  }*/
+
     handleMouseOver(e){
 
    // console.log( e.currentTarget.id)
@@ -93,16 +78,7 @@ class App extends React.Component {
       isOnHover = {this.state.isOnHover} 
 />}
    />  
-{/*   <Route path="/other"
-    render={(props) => <Other {...props}
 
-      title={`Props through render`}
-      onMouseOver={this.handleMouseOver}          
-      onMouseLeave={this.handleMouseLeave} 
-  
-      cardInFocus={this.state.cardInFocus} 
-      isOnHover = {this.state.isOnHover} 
-/>}*/}
    />
   <Route path="/contacts"     render={(props) => <Contacts {...props}
     exact
