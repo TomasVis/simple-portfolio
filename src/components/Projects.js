@@ -26,7 +26,7 @@ const fifthIconStyles = {color:"#38a7ba",position:"absolute",bottom:"30px", left
 const linksCalculator={
 	projectName:"JavaScript Calculator",
 	gitLink:"https://github.com/TomasVis/calculator",
-	liveLink:"https://javascript-calculator-258317.appspot.com/",
+	liveLink:"https://tomas.trial.rocks/calculator/",
 
 }
 const linksUrlShortener={
@@ -44,7 +44,7 @@ const linksWP={
 const linksQuotes={
 	projectName:"Quote Generator",
 	gitLink:"https://github.com/TomasVis/quotes",
-	liveLink:"https://quote-generator-258414.appspot.com/",
+	liveLink:"https://tomas.trial.rocks/generator/",
 
 }
 
